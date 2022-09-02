@@ -52,7 +52,7 @@ docker = {
                 "bucket": "dagster",
                 "access_key": "test",
                 "secret_key": "test",
-                "endpoint_url": "http://host.docker.internal:4566",
+                "endpoint_url": "http://localstack:4566",
             }
         },
         "redis": {
@@ -62,7 +62,7 @@ docker = {
             }
         },
     },
-    "ops": {"get_s3_data": {"config": {"s3_key": "preifx/stock.csv"}}},
+    "ops": {"get_s3_data": {"config": {"s3_key": "prefix/stock.csv"}}},
 }
 
 local_week_2_pipeline = week_2_pipeline.to_job(
